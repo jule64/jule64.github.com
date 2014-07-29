@@ -1,47 +1,51 @@
 <!DOCTYPE html>
-<html ng-app>
+<html>
 
 <head>
 <meta charset="utf-8" />
-<title>Your First AngularJS App</title>
+<title>Playing with AngularJS</title>
 
 
 <!-- The single AngularJS include -->
-<script
-	src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.0.5/angular.min.js"></script>
+<script	src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
 <script src="script.js"></script>
 
 <!-- The main CSS file -->
 <link href="style.css" rel="stylesheet" />
 </head>
 
-<body>
+<body ng-app="my_module" ng-controller="OrderFormController">
 
-	<div ng-controller="TestController">
-		<p ng-bind-html="introText"></p>
-	</div>
 
-	<form ng-controller="OrderFormController">
+<div style="width: 100%;overflow:auto;">
+    <div style="float:left; width: 25%; margin-left: 10%; margin-top: 7%">
+        <p ng-bind-html="introText"></p>
+    </div>
+    <div style="margin-left: 35%;">
+        <form>
 
-		<h1>Playing with Angular</h1>
+            <h1>Playing with Angular</h1>
 
-		<ul>
-			<!-- Loop through the services array, assign a click handler, and set or
-			remove the "active" css class if needed -->
-			<li ng-repeat="service in services" ng-click="toggleActive(service)"
-				ng-class="{active:service.active}">
-				<!-- Notice the use of the currency filter, it will format the price -->
-				{{service.name}} <span>{{service.price | currency}}</span>
-			</li>
-		</ul>
+            <ul>
+                <!-- Loop through the services array, assign a click handler, and set or
+                remove the "active" css class if needed -->
+                <li ng-repeat="service in services" ng-click="toggleActive(service)"
+                    ng-class="{active:service.active}">
+                    <!-- Notice the use of the currency filter, it will format the price -->
+                    {{service.name}} <span>{{service.price | currency}}</span>
+                </li>
+            </ul>
 
-		<div class="total">
-			<!-- Calculate the total price of all chosen services. Format it as currency. -->
-			Total: <span>{{total() | currency}}</span>
-		</div>
+            <div class="total">
+                <!-- Calculate the total price of all chosen services. Format it as currency. -->
+                Total: <span>{{total() | currency}}</span>
+            </div>
 
-	</form>
-
+        </form>
+    </div>
+</div>
+<div style="clear:both"></div>
 
 
 </body>
