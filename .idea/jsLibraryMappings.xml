@@ -2,6 +2,9 @@
 <project version="4">
   <component name="JavaScriptLibraryMappings">
     <file url="file://$PROJECT_DIR$/blogposts/playingwithAngularJS/index.html" libraries="{angular}" />
+    <file url="file://$PROJECT_DIR$/index.html" libraries="{bootstrap}" />
+    <file url="PROJECT" libraries="{angular, angularjs-DefinitelyTyped, jquery}" />
+    <includedPredefinedLibrary name="WebGL" />
   </component>
 </project>
 
