@@ -1,4 +1,3 @@
-/.project
-img/me.JPG
-/.idea/*
-/.idea/scopes/*
+.project
+.idea/
+*.iml
