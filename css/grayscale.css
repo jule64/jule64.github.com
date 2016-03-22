@@ -18,10 +18,15 @@ h4,
 h5,
 h6 {
     margin: 0 0 35px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
+}
+
+h4.h4-white {
+    color: #f5f5f5;
+    font-size: 250%;
 }
 
 p {
@@ -45,10 +50,16 @@ a {
     transition: all .2s ease-in-out;
 }
 
+.large-chars {
+    font-size: large;
+    color: white
+}
+
 a:hover,
 a:focus {
     text-decoration: none;
     color: #176e61;
+    color: #c30d73;
 }
 
 .light {
@@ -75,7 +86,7 @@ a:focus {
     /*color: #fff;*/
 /*}*/
 
-.navbar-custom .nav li a {
+.navbar-custom .nav li a h4 {
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
     transition: background .3s ease-in-out;
@@ -172,10 +183,10 @@ a:focus {
     height: 70px;
     margin-top: 15px;
     padding: 7px 16px;
-    border: 2px solid #449c76;
+    border: 2px solid #f5f5f5;
     border-radius: 35px;
     font-size: 40px;
-    color: #449c76;
+    color: #f5f5f5;
     background: 0 0;
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
@@ -185,7 +196,8 @@ a:focus {
 .btn-circle:hover,
 .btn-circle:focus {
     outline: 0;
-    color: #272727;
+    color: #c30d73;
+    border: 2px solid #c30d73;
     background: rgba(255,255,255,.1);
 }
 
@@ -245,7 +257,7 @@ a:focus {
     padding-top: 100px;
 }
 
-.download-section {
+.street-section {
     width: 100%;
     padding: 50px 0;
     color: #fff;
@@ -288,17 +300,17 @@ a:focus {
 }
 
 .btn-default {
-    border: 1px solid #28c3ab;
-    color: #28c3ab;
-    background-color: transparent;
+    border: 1px solid #c30d73;
+    color: #c30d73;
+    background-color: rgba(20, 20, 20, 0.42);
 }
 
 .btn-default:hover,
 .btn-default:focus {
-    border: 1px solid #28c3ab;
+    border: 1px solid #c30d73;
     outline: 0;
     color: #000;
-    background-color: #28c3ab;
+    background-color: #c30d73;
 }
 
 .btn-huge {
